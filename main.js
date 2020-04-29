@@ -11,15 +11,24 @@ const displayDate = () => {
   const currentDate = new Date()
 
   document.getElementById("display-element").innerHTML = currentDate;
+  document.appendChild("dateTime").innerHTML = dateTime
+  dateTime.createTextNode()
 }
  
 
 // Write a JavaScript program to convert a number to a string.
 
-
+function numberConvert () {
+  let num = 15;
+  const  n = num.toString();
+  console.log(n)
+}
 
 // Write a JavaScript program to convert a string to the number.
-
+function stringNum () {
+  const a = parseInt ("10")
+  console.log()
+}
 
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
@@ -29,22 +38,66 @@ const displayDate = () => {
   // * Number
   // * NaN
   // * String
-  
+
+  function dataTypes () {
+    if (typeof = Boolean) {
+      document.write("Boolean")
+    }
+    if (typeof = null) {
+      document.write("Null")
+    }
+    if (typeof = undefined) {
+      document.write("Undefined")
+    }
+    if (typeof = Number) {
+      document.write("Number")
+    }
+    if (typeof = NaN) {
+      document.write("NaN")
+    }
+    if (typeof = String) {
+      document.write("String")
+    }
+  }
 
   
 // Write a JavaScript program that adds 2 numbers together.
 
-
+const add = (x,y) => {
+  return (x + y);
+}
+console.log()
 
 // Write a JavaScript program that runs only when 2 things are true.
 
-
+const bothTrue = (a,b) => {
+  if (a && b = true) {
+    return true
+  }
+  else {
+    return false
+  }
+}
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
 
+const oneTrue = (c,d) => {
+  if (c||d = true)  {
+    return true
+  }
+  else {
+    return false
+  }
+}
 
 
 // Write a JavaScript program that runs when both things are not true.  
+
+const notTrue = (e,f) => {
+  if (e && f = false) {
+    return false
+  }
+}
 
 // ***************************
 //         PART TWO
