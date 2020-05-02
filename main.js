@@ -12,20 +12,20 @@ const displayDate = () => {
 
   document.getElementById("display-element").innerHTML = currentDate;
   document.appendChild("dateTime").innerHTML = dateTime
-  dateTime.createTextNode()
+  dateTime.createTextNode("dateTime").innerHTML = dateTime
 }
  
 
 // Write a JavaScript program to convert a number to a string.
 
-function numberConvert () {
+function numberConvert = () => {
   let num = 15;
   const  n = num.toString();
   console.log(n)
 }
 
 // Write a JavaScript program to convert a string to the number.
-function stringNum () {
+function stringNum = () => {
   const a = parseInt ("10")
   console.log()
 }
@@ -39,7 +39,7 @@ function stringNum () {
   // * NaN
   // * String
 
-  function dataTypes () {
+  function dataTypes = () => {
     if (typeof = Boolean) {
       document.write("Boolean")
     }
@@ -81,8 +81,12 @@ const bothTrue = (a,b) => {
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
 
+
+
+const x = x
+
 const oneTrue = (c,d) => {
-  if (c||d = true)  {
+  if (c || d = true) {
     return true
   }
   else {
@@ -96,6 +100,9 @@ const oneTrue = (c,d) => {
 const notTrue = (e,f) => {
   if (e && f = false) {
     return false
+  } 
+  else {
+    return true 
   }
 }
 
