@@ -8,28 +8,33 @@
 console.log(new Date)
 
 const displayDate = () => {
-  const currentDate = new Date()
-
-  document.getElementById("display-element").innerHTML = currentDate;
-  document.appendChild("dateTime").innerHTML = dateTime
-  dateTime.createTextNode("dateTime").innerHTML = dateTime
+  const currentDate = new Date();
+  document.getElementById("dateShow").innerHTML = currentDate
 }
+  // document.appendChild("dateTime").innerHTML = dateTime
+  // dateTime.createTextNode("dateTime").innerHTML = dateTime
  
 
 // Write a JavaScript program to convert a number to a string.
 
-function numberConvert = () => {
-  let num = 15;
-  const  n = num.toString();
-  console.log(n)
-}
+const numberConvert = () => {
+  let num = document.getElementById("numberConvert").value
+  let n = num.toString()
+  document.getElementById("stringShow").innerHTML = n
+  return n
+  }
+
+  // console.log(numberConvert(10))
+  // console.log(10)
 
 // Write a JavaScript program to convert a string to the number.
-function stringNum = () => {
-  const a = parseInt ("10")
-  console.log()
+const stringNum = () => {
+  let string = document.getElementById("stringConvert").value;
+  let x = parseInt (string)
+  document.getElementById("numberShow").innerHTML = x
+  return x
 }
-
+console.log(string)
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
   // * Boolean
@@ -39,39 +44,48 @@ function stringNum = () => {
   // * NaN
   // * String
 
-  function dataTypes = () => {
-    if (typeof = Boolean) {
-      document.write("Boolean")
+  const dataTypes = () => {
+    const data = document.getElementById("dataType").value
+      if (data === "null") {
+        document.getElementById("showData").innerHTML = "null";
+      }
+      else if (data === "true") {
+        document.getElementById("showData").innerHTML = "boolean";
+      }
+      else if (data === "false") {
+        document.getElementById("showData").innerHTML = "boolean";
+      }
+      else if (data === "") {
+        document.getElementById("showData").innerHTML = "undefined";
+      }
+      else if (data <= Number.MAX_VALUE) {
+        document.getElementById("showData").innerHTML = "number"
+      }
+      else {
+        document.getElementById("showData").innerHTML = "NaN" + typeof data
+      }
     }
-    if (typeof = null) {
-      document.write("Null")
-    }
-    if (typeof = undefined) {
-      document.write("Undefined")
-    }
-    if (typeof = Number) {
-      document.write("Number")
-    }
-    if (typeof = NaN) {
-      document.write("NaN")
-    }
-    if (typeof = String) {
-      document.write("String")
-    }
-  }
+    // document.getElementById("showData").innerHTML 
+    // return typeof data
+    // 
 
+    // console.log(dataTypes(true))
   
 // Write a JavaScript program that adds 2 numbers together.
 
-const add = (x,y) => {
+const addNumbers = () => {
+  let x = document.getElementById("x").value
+  let y = document.getElementById("y").value
+  let sum = parseInt(x) + parseInt(y)
+  document.getElementById("showSum").innerHTML = sum;
   return (x + y);
 }
-console.log()
+console.log(sum)
 
 // Write a JavaScript program that runs only when 2 things are true.
 
 const bothTrue = (a,b) => {
-  if (a && b = true) {
+  if (a && b === true) {
     return true
   }
   else {
@@ -83,10 +97,8 @@ const bothTrue = (a,b) => {
 
 
 
-const x = x
-
 const oneTrue = (c,d) => {
-  if (c || d = true) {
+  if (c || d === true) {
     return true
   }
   else {
@@ -98,11 +110,11 @@ const oneTrue = (c,d) => {
 // Write a JavaScript program that runs when both things are not true.  
 
 const notTrue = (e,f) => {
-  if (e && f = false) {
-    return false
+  if (e && f === false) {
+    return true
   } 
   else {
-    return true 
+    return false 
   }
 }
 
