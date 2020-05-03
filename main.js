@@ -24,8 +24,7 @@ const numberConvert = () => {
   return n
   }
 
-  // console.log(numberConvert(10))
-  // console.log(10)
+ 
 
 // Write a JavaScript program to convert a string to the number.
 const stringNum = () => {
@@ -34,7 +33,7 @@ const stringNum = () => {
   document.getElementById("numberShow").innerHTML = x
   return x
 }
-console.log(string)
+// console.log(string)
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
   // * Boolean
@@ -46,30 +45,26 @@ console.log(string)
 
   const dataTypes = () => {
     const data = document.getElementById("dataType").value
-      if (data === "null") {
+      if (data == 'null') {
         document.getElementById("showData").innerHTML = "null";
       }
-      else if (data === "true") {
-        document.getElementById("showData").innerHTML = "boolean";
+      else if (data === 'true') {
+        document.getElementById("showData").innerHTML = "Boolean";
       }
-      else if (data === "false") {
-        document.getElementById("showData").innerHTML = "boolean";
+      else if (data === 'false') {
+        document.getElementById("showData").innerHTML = "Boolean";
       }
       else if (data === "") {
         document.getElementById("showData").innerHTML = "undefined";
       }
       else if (data <= Number.MAX_VALUE) {
-        document.getElementById("showData").innerHTML = "number"
+        document.getElementById("showData").innerHTML = "number";
       }
       else {
         document.getElementById("showData").innerHTML = "NaN" + typeof data
       }
     }
-    // document.getElementById("showData").innerHTML 
-    // return typeof data
-    // 
-
-    // console.log(dataTypes(true))
+  
   
 // Write a JavaScript program that adds 2 numbers together.
 
