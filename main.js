@@ -11,9 +11,7 @@ const displayDate = () => {
   const currentDate = new Date();
   document.getElementById("dateShow").innerHTML = currentDate
 }
-  // document.appendChild("dateTime").innerHTML = dateTime
-  // dateTime.createTextNode("dateTime").innerHTML = dateTime
- 
+
 
 // Write a JavaScript program to convert a number to a string.
 
@@ -73,18 +71,29 @@ const addNumbers = () => {
   let y = document.getElementById("y").value
   let sum = parseInt(x) + parseInt(y)
   document.getElementById("showSum").innerHTML = sum;
-  return (x + y);
+  return (sum);
 }
-console.log(sum)
 
 // Write a JavaScript program that runs only when 2 things are true.
 
-const bothTrue = (a,b) => {
-  if (a && b === true) {
-    return true
+const bothTrue = () => {
+  let firstBool = document.getElementById("first").value;
+  let secondBool = document.getElementById("second").value;
+  firstBool = firstBool.toLowercase();
+  firstBool = firstBool.trim();
+  secondBool = secondBool.toLowercase();
+  secondBool = secondBool.trim();
+  if(firstBool == "true" && secondBool == "true") {
+    document.getElementById("both").innerHTML = "Both these values are true."
   }
-  else {
-    return false
+  else if(firstBool || secondBool == "true") {
+    document.getElementById("both").innerHTML = "Only one of these values is true."
+  }
+   else if(firstBool && secondBool == "false") {
+    document.getElementById("both").innerHTML = "Both these values are false."
+  }
+  else{
+    document.getElementById("both").innerHTML = "Not found, please enter a boolean value."
   }
 }
 
